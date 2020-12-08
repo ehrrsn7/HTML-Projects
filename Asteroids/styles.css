@@ -1,0 +1,45 @@
+html,
+body {
+    background-color: rgb(103, 137, 148);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 1em 0 rgb(0, 0, 0);
+}
+
+header,
+canvas {
+    /* positioning: center */
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+canvas {
+    border-radius: 7px;
+    margin-left: 2em;
+}
+
+h1 {
+    color: white;
+    letter-spacing: 30px;
+}
+
+h2 {
+    color: rgb(255, 163, 163);
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+h3 {
+    color: rgb(255, 163, 163);
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background-color: rbg(10, 10, 50);
+        color: red;
+    }
+}
