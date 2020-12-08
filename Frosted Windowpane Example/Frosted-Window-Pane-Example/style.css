@@ -1,0 +1,94 @@
+html {
+    /* parent attributes */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .15em;
+    color: black;
+}
+
+body {
+    /* remove default body el margin */
+    margin: auto;
+    /* https://www.sitepoint.com/community/t/what-is-setting-an-8px-margin-on-my-page/309002 */
+}
+
+
+/* child elements in page */
+
+.parallax,
+header,
+footer {
+    /* positioning: center */
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    /* be sure to include  */
+}
+
+
+/*****
+ * for parallax scrolling effect
+ * https://www.w3schools.com/howto/howto_css_parallax.asp
+ *****/
+
+.parallax {
+    background-image: url("leaves.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+
+/*
+ * Frosted Windowpane Effect
+ */
+
+.frosted {
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(10px);
+    width: 40em;
+    height: 90%;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5);
+    border-radius: .5rem;
+    /* spacing around box */
+    margin: 1em;
+    /* spacing within box */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .25rem;
+    padding-bottom: 2rem;
+    /* tutorial: https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+}
+
+#frosted-dark {
+    /* frosted header; TODO: change to #frosted-header */
+    background-color: rgba(20, 10, 5, .2);
+    border-radius: .25rem;
+    padding: .25rem;
+    padding-left: 1rem;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: rgb(248, 238, 238);
+        background-color: rgb(20, 20, 20);
+    }
+    .frosted {
+        background-color: rgba(22, 22, 22, .4);
+    }
+}
