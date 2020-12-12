@@ -1,0 +1,194 @@
+html,
+body {
+    /* parent attributes */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .15em;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url("marty-mcfly.jpg");
+    /* parallax scrolling effect:
+    https: //www.w3schools.com/howto/howto_css_parallax.asp */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40em;
+    padding-bottom: 80em;
+    /* background filter */
+    transition: backdrop-filter 1.5s;
+    backdrop-filter: blur(5px) sepia(.4) contrast(.8) brightness(1);
+}
+
+
+/* child elements in page */
+
+.horizontal-containers,
+header,
+footer {
+    /* center positioning */
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    /* Be sure to include attributes in .parallax */
+    border-radius: 0;
+}
+
+.horizontal-containers {
+    margin-top: 0;
+    margin-right: 1em;
+}
+
+
+/* Gradient-Style Text Header */
+
+.gradient-text-title {
+    font-size: 6em;
+    margin: .6em;
+    background-image: linear-gradient(150deg, rgb(236, 0, 39), rgb(0, 152, 223));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+#gradient-text-instagram {
+    font-size: 3em;
+    background-image: linear-gradient(150deg, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#gradient-text-github {
+    font-size: 3em;
+    background-image: linear-gradient(45deg, rgb(110, 110, 110), black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#github-icon {
+    border-radius: .5em;
+}
+
+
+/*
+ * Frosted Windowpane Effect
+ */
+
+.frosted {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    height: fit-content;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5);
+    border-radius: .5rem;
+    /* spacing around box */
+    margin: 1em;
+    /* spacing within box */
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-top: .25rem;
+    padding-bottom: 2rem;
+    /* tutorial: https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+}
+
+#frosted-header {
+    background-color: rgba(153, 156, 160, 0.5);
+    backdrop-filter: blur(9px);
+    border-radius: .25rem;
+    padding: .25rem;
+    padding-left: 1rem;
+}
+
+header {
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(9px);
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 15px;
+}
+
+a {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: rgb(78, 78, 78);
+}
+
+.big-link {
+    font-size: xxx-large;
+}
+
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: rgb(240, 240, 240);
+        background-color: rgb(20, 25, 25);
+    }
+    .frosted {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    #frosted-header {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    header {
+        background-color: rgba(0, 0, 0, .9);
+    }
+    .gradient-text-title {
+        font-size: 6em;
+        margin: .6em;
+        background-image: linear-gradient(45deg, rgb(255, 38, 74), rgb(0, 174, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    #gradient-text-instagram {
+        background-image: linear-gradient(45deg, rgb(255, 107, 126), rgb(80, 100, 255));
+    }
+    #gradient-text-github {
+        background-image: linear-gradient(45deg, rgb(255, 255, 255), rgb(155, 155, 155));
+    }
+    #github-icon {
+        background-color: white;
+    }
+    a {
+        color: rgb(172, 172, 172);
+    }
+    a:hover {
+        color: white;
+    }
+}
+
+
+/* MOBILE (VERTICAL ORIENTATION) */
+
+@media only screen and (max-width: 700px) {
+    .parallax {
+        /* background-image: "assets/profile vertical.jpg"; */
+    }
+}
